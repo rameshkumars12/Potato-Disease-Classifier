@@ -1,0 +1,6 @@
+tensorflow==2.7.0
+PIL
+matplotlib
+numpy
+streamlit
+keras
