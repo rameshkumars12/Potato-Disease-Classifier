@@ -17,7 +17,7 @@ import numpy as np
 #Crearting a function for prediction
 def predict_img(image):
     class_names = ["Early_Blight","Healthy","Late_Blight"]
-    model = tf.keras.models.load_model("/content/potatoe_disease_classifier.h5")
+    model = tf.keras.models.load_model("https://github.com/rameshkumars12/Potato-Disease-Classifier/blob/main/potatoe_disease_classifier.h5")
 
     image_array = np.array(image)
     img_batch = np.expand_dims(image_array, 0)
