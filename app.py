@@ -20,8 +20,10 @@ def predict_img(image):
     model = tf.keras.models.load_model("potatoe_disease_classifier.h5")
 
     image_array = np.array(image)
-    img_batch = np.expand_dims(image_array, 0)
-
+    try:
+        img_batch = np.expand_dims(image_array, 0)
+    except:
+        st.write("Upload Only Potato Image")
     prediction = model.predict(img_batch)
     predicted_class = class_names[np.argmax(prediction[0])]
     confidence = round(np.max(prediction[0]),2)
